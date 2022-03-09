@@ -1,4 +1,4 @@
-# xiaobang_teacher
+# xiaobang
 
 ## Project setup
 ```
