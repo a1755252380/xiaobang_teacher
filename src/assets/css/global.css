@@ -1,0 +1,45 @@
+
+html,
+body,
+#app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li {
+
+    list-style: none;
+}
+span,h1,p{
+    user-select: none;
+}
+.el-avatar img {
+    width: 100% ;
+  }
+  .el-header {
+    height: 70px;
+  }
+  .el-menu.el-menu--horizontal {
+      border: 0;
+  }
+
+  
+  
+  .el-input .el-input__inner {
+    background-color: #F9F8FD;
+    outline: none;
+    border: none;
+}
+
+.el-icon-view  {
+    display: none;
+}
+.vjs-time-tooltip {
+    display: none !important;
+}
+

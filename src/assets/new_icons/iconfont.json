@@ -1,0 +1,23 @@
+{
+  "id": "2550181",
+  "name": "xiaobang",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7708023",
+      "name": "眼睛_开",
+      "font_class": "yanjing_kai",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "15657518",
+      "name": "眼睛_闭",
+      "font_class": "yanjing_bi",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    }
+  ]
+}
