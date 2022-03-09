@@ -115,7 +115,7 @@ export default new Vuex.Store({
     },
     radom_student_information_data2 (state,num) { 
     
-      for (let i = 58; i <= 357+parseInt(Math.random()*200); i++) {
+      for (let i = 58; i <= 523; i++) {
         // let img = "../assets/images/student/" + i + ".jpg";
         let da = {
           id: i-1,
@@ -240,7 +240,7 @@ export default new Vuex.Store({
     },
     radom_teacher_information_data2 (state,num) { 
      
-      for (let i = 18; i <= 117; i++) {
+      for (let i = 18; i <= 67; i++) {
         // let img = "../assets/images/student/" + i + ".jpg";
         let da = {
           id: i-1,
