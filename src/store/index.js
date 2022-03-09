@@ -10,7 +10,14 @@ export default new Vuex.Store({
     student_name:['云凌可','郎朝剑','余梦茂','凌瑛昼','吕映冉','涂翰毅','魏争博','周放大','凌松帆','文驹治',
       '柯独杜','李锐汉','严锋滕','李恩妙','元骞振','杨舟察','连解淦','黎舒旺','张豆焕','卢帆新',
       '华章滕','林包显','于泰哲','盛枫瑾','侯善稚','薛敬文','文子隐','俞贡延','韦烽凌','关戚栾',
-      '袁修纯', '柯河舍', '郭俊立', '岑希伙', '樊辰博', '古驰', '夏思徽', '陶旭笙', '张准辰', '邢编'],
+      '袁修纯', '柯河舍', '郭俊立', '岑希伙', '樊辰博', '古驰', '夏思徽', '陶旭笙', '张准辰', '邢编',
+      '冬儿','易梦','惜雪','宛海','之柔','夏青','亦瑶','妙菡','春竹','痴梦','紫蓝','晓巧',
+ 
+      '幻柏','元风','冰枫','访蕊','南春','芷蕊','凡蕾','凡柔','安蕾','天荷','含玉','书兰',
+       
+      '雅琴','书瑶','春雁','从安','夏槐','念芹','怀萍','代曼','幻珊','谷丝','秋翠','白晴',
+       
+      '海露','代荷','含玉','书蕾','听白','访琴','灵雁','秋春','雪青','乐瑶','含烟','涵双',],
     //老师姓名
     teacher_name: [
       '王颢锵','简邦余','云羿谆','云悠洋','穆影焱','龙绍焱','胡睿','岳叔华','路留时','尤介辉',
@@ -92,13 +99,29 @@ export default new Vuex.Store({
       if (state.student_information_data.length!=0) {
         return
       }
-      for (let i = 1; i <= 32; i++) {
+      for (let i = 1; i <=57; i++) {
         // let img = "../assets/images/student/" + i + ".jpg";
         let da = {
           id: i-1,
           imgSrc:require("../assets/images/student/"+i+".jpg"),
           
           name: state.student_name[i],
+          score: 50 +Math.floor(Math.random()*51),
+          isPlay: true,
+        };
+        state.student_information_data.push(da)
+      }
+      this.commit("radom_student_information_data2")
+    },
+    radom_student_information_data2 (state,num) { 
+    
+      for (let i = 58; i <= 357+parseInt(Math.random()*200); i++) {
+        // let img = "../assets/images/student/" + i + ".jpg";
+        let da = {
+          id: i-1,
+          imgSrc:require("../assets/images/student/"+parseInt(1+Math.random()*56)+".jpg"),
+          
+          name: state.student_name[Math.floor(Math.random()*state.student_name.length+1)],
           score: 50 +Math.floor(Math.random()*51),
           isPlay: true,
         };
@@ -209,9 +232,28 @@ export default new Vuex.Store({
           score: parseInt(Math.random()*100),
           isPlay: true,
         };
+        
+       state.teacher_information_data.push(da)
+      }
+      
+      this.commit("radom_teacher_information_data2")
+    },
+    radom_teacher_information_data2 (state,num) { 
+     
+      for (let i = 18; i <= 117; i++) {
+        // let img = "../assets/images/student/" + i + ".jpg";
+        let da = {
+          id: i-1,
+          imgSrc:require("../assets/images/teacher/"+parseInt(1+Math.random()*16)+".jpg"),
+          
+          name: state.teacher_name[parseInt(Math.random()*state.teacher_name.length)],
+          score: parseInt(Math.random()*100),
+          isPlay: true,
+        };
         state.teacher_information_data.push(da)
       }
     },
+
     //教师课程数据模拟
     random_teacher_class (state) { 
       if (state.teacher_class.length!=0) {
@@ -233,7 +275,7 @@ export default new Vuex.Store({
         let a=parseInt(1 + Math.random() * 4)
         for (let i = 0; i < a; i++){ 
           if (i<a&&i!=0) {
-            student +="、"
+            student +=","
           }
           student += state.student_name[parseInt(Math.random() * state.student_name.length)]
         }
@@ -270,7 +312,7 @@ export default new Vuex.Store({
         let a=parseInt(1 + Math.random() * 4)
         for (let i = 0; i < a; i++){ 
           if (i<a&&i!=0) {
-            student +="、"
+            student +=","
           }
           student += state.student_name[parseInt(Math.random() * state.student_name.length)]
         }

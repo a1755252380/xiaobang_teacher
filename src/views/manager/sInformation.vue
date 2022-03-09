@@ -121,7 +121,9 @@ export default {
     }
   },
     mounted() {
-      this.$store.commit("radom_student_information_data",17);
+      if(this.$store.state.student_information_data.length==0){
+        this.$store.commit('radom_student_information_data');
+      }
       this.stuList=this.$store.state.student_information_data;
      
     },

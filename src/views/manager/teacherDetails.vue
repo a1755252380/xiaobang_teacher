@@ -116,10 +116,17 @@
 .right_container {
   margin-top: 20px;
 }
+.middle_container {
+  margin-top: 7vh !important;
+}
+.course_container{
+  margin-top: 20px;
+}
+
 }
 .task_table{
   overflow-y: scroll;
-   height: 38vh;
+   height: 37vh;
    text-align: left;
 }
 .el-container {
@@ -185,14 +192,15 @@
 }
 .course_container {
   width: 100%;
-  height: 57%;
+  height: 58%;
   text-align: center;
   
 }
 .classname{
   overflow-y: scroll;
-  height: 29vh;
+  height: 26vh;
   text-align: left;
+  
 }
 .course_container .el-card {
   text-align: flex-start;

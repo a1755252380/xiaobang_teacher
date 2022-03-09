@@ -171,7 +171,7 @@
 }
 .classname {
   overflow-y: scroll;
-  height: 29vh;
+  height: 26vh;
     text-align: left !important;
 }
 .course_container .el-card {
@@ -207,6 +207,9 @@
 .right_container {
   margin-top: 20px;
 }
+.middle_container{
+  margin-top: 6vw !important;
+}
 }
 .level_card {
   height: 20%;
@@ -221,7 +224,7 @@
 }
 .task_table{
   overflow-y: scroll;
-   height: 38vh;
+   height: 37vh;
   text-align: left;
 
 }

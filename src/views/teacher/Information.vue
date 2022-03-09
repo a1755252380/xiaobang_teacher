@@ -113,7 +113,7 @@
                   v-if="item.isPlay"
                 >
                   <el-avatar
-                    :size="120"
+                    :size="100"
                     :src="item.imgSrc"
                   ></el-avatar>
                   <p>{{ item.name }}</p>

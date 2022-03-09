@@ -12,7 +12,7 @@
         :xl="12"
       >
         <el-card class="ability_ranking">
-          <h1>学生能力排行榜(总人数1108人，前十榜单)</h1>
+          <h1>学生能力排行榜(总人数{{sum}}人，前十榜单)</h1>
           <el-table
            ref="stulist_table"
           
@@ -114,7 +114,7 @@
                   v-if="item.isPlay"
                 >
                   <el-avatar
-                    :size="120"
+                    :size="100"
                     :src="item.imgSrc"
                   ></el-avatar>
                   <p>{{ item.name }}</p>
@@ -242,7 +242,8 @@ export default {
         
       ],
       classlist:[],
-      tableheight:600
+      tableheight:600,
+      sum:0,
     };
   },
   methods: {
@@ -255,11 +256,12 @@ export default {
     }
   },
     mounted() {
+       this.$store.commit("radom_student_information_data",17);
       this.$store.commit("radom_manager_top",10);
       this.stuList=this.$store.state.manager_top;
         this.$store.commit("random_class");
       this.classlist=this.$store.state.class_data;
-     
+      this.sum=this.$store.state.student_information_data.length
     },
  
 };
